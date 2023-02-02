@@ -517,6 +517,9 @@
 
     <!-- Whether or not wcg mode should be enabled on this device -->
     <bool name="config_enableWcgMode">true</bool>
+    
+    <!-- Whether device supports in-display fingerprint -->
+    <bool name="config_supportsUdfps">false</bool>
 
     <!-- List of biometric sensors on the device, in decreasing strength. Consumed by AuthService
      when registering authenticators with BiometricService. Format must be ID:Modality:Strength,
