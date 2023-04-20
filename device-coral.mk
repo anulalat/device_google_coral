@@ -18,8 +18,7 @@ PRODUCT_HARDWARE := coral
 
 include device/google/coral/device-common.mk
 
-DEVICE_PACKAGE_OVERLAYS += device/google/coral/coral/overlay\
-                           device/google/coral/coral/overlay-evolution
+DEVICE_PACKAGE_OVERLAYS += device/google/coral/coral/overlay
 
 # Audio XMLs for coral
 PRODUCT_COPY_FILES += \

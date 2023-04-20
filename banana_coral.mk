@@ -41,12 +41,16 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_product.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/handheld_vendor.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_vendor.mk)
 
-# Inherit some common EvolutioX stuff
+# Inherit some common BananaDroid stuff.
+$(call inherit-product, vendor/banana/config/common.mk)
+
+BANANA_BUILD_TYPE := UNOFFICIAL
+BANANA_MAINTAINER := Cursed
 TARGET_BOOT_ANIMATION_RES := 1440
+WITH_GAPPS := true
 TARGET_GAPPS_ARCH := arm64
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_FACE_UNLOCK_SUPPORTED := false
-$(call inherit-product, vendor/evolution/config/common_full_phone.mk)
 
 $(call inherit-product, device/google/coral/device-coral.mk)
 $(call inherit-product-if-exists, vendor/google_devices/coral/proprietary/device-vendor.mk)
@@ -72,7 +76,7 @@ endif
 
 PRODUCT_MANUFACTURER := Google
 PRODUCT_BRAND := google
-PRODUCT_NAME := evolution_coral
+PRODUCT_NAME := banana_coral
 PRODUCT_DEVICE := coral
 PRODUCT_MODEL := Pixel 4 XL
 
@@ -83,6 +87,3 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 BUILD_FINGERPRINT := google/coral/coral:13/TP1A.221005.002/9012097:user/release-keys
 
 $(call inherit-product, vendor/google/coral/coral-vendor.mk)
-
-#EvoX
-EVO_BUILD_TYPE := OFFICIAL
