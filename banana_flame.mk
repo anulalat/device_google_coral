@@ -16,6 +16,9 @@ TARGET_FACE_UNLOCK_SUPPORTED := false
 TARGET_ENABLE_BLUR := true
 TARGET_EXCLUDE_MATLOG := true
 
+WITH_GAPPS := true
+TARGET_GAPPS_ARCH := arm64
+
 # Device identifier. This must come after all inclusions
 PRODUCT_BRAND := google
 PRODUCT_MODEL := Pixel 4 XL
