@@ -5,9 +5,13 @@ LOCAL_MODULE := RemovePackages
 LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_TAGS := optional
 LOCAL_OVERRIDES_PACKAGES := \
-	DocumentsUIGoogle \
-	FilesPrebuilt \
-	talkback
+	CalendarGooglePrebuilt \
+  GrapheneCamera \
+  Maps \
+  Drive \
+  PrebuiltGmail \
+  YouTube \
+  YouTubeMusicPrebuilt
 LOCAL_UNINSTALLABLE_MODULE := true
 LOCAL_CERTIFICATE := PRESIGNED
 LOCAL_SRC_FILES := /dev/null
