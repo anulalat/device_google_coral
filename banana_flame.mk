@@ -6,7 +6,13 @@
 
 # Inherit some common Lineage stuff.
 TARGET_DISABLE_EPPE := true
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+TARGET_FACE_UNLOCK_SUPPORTED := false
+
+# Inherit some common BananaDroid stuff.
+$(call inherit-product, vendor/banana/config/common.mk)
+
+BANANA_MAINTAINER := Cursed
+TARGET_BOOT_ANIMATION_RES := 1080
 
 # Inherit device configuration
 $(call inherit-product, device/google/coral/aosp_flame.mk)
@@ -16,7 +22,7 @@ include device/google/coral/flame/device-lineage.mk
 # Device identifier. This must come after all inclusions
 PRODUCT_BRAND := google
 PRODUCT_MODEL := Pixel 4
-PRODUCT_NAME := lineage_flame
+PRODUCT_NAME := banana_flame
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2280
