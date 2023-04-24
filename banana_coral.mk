@@ -11,6 +11,9 @@ TARGET_FACE_UNLOCK_SUPPORTED := false
 # Inherit some common BananaDroid stuff.
 $(call inherit-product, vendor/banana/config/common.mk)
 
+WITH_GAPPS := true
+TARGET_EXCLUDE_MATLOG := true
+
 BANANA_MAINTAINER := Cursed
 TARGET_BOOT_ANIMATION_RES := 1440
 
